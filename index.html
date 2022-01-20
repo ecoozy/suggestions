@@ -247,17 +247,17 @@ h1 {
 <div class="modal-dialog modal-dialog-centered d-flex align-items-center" role="document" style="border-radius: 10px !important;">
     <div class="modal-content" style="border-radius: 10px !important;background-color: #1D1E28; border-top: 6px #fba114 solid !important; border-bottom: 6px #fba114 solid !important; border-left: 6px #fba114 solid !important; border-right: 6px #fba114 solid !important; background: #1D1E28 url("https://cdn.lowgif.com/full/77489de8722ed908-the-gallery-for-rain-overlay.gif") no-repeat;">
       <div class="modal-header">
-        <h5 class="modal-title" style="font-size: 60px; font-weight: 120px !important; color: #FBA114;" id="exampleModalLongTitle">Bug report!</h5>
+        <h5 class="modal-title" style="font-size: 60px; font-weight: 120px !important; color: #FBA114;" id="exampleModalLongTitle">Suggestions!</h5>
 	      <p style="color: white">Spam and other nonsense will result in a bot blacklist</p>
       </div>
       <div class="modal-body">
         <p><form>
-      <label style="color:#FBA114" for="fname">Issue title:</label><br />
+      <label style="color:#FBA114" for="fname">Suggestion title:</label><br />
       <input
         type="text"
         id="title"
         name="title"
-        placeholder=" Issue title"
+        placeholder=" Suggestion title"
         maxlength="40"
         style="border-radius: 10px;  border: 2px solid #fba114; width: 400px"
       /><br />
@@ -270,19 +270,19 @@ h1 {
         maxlength="30"
         style="border-radius: 10px;  border: 2px solid #fba114; width: 400px"
       /><br />
-      <label style="color:#FBA114" for="issue">Explain bug:</label><br />
+      <label style="color:#FBA114" for="issue">Describe suggestion:</label><br />
       <textarea
         type="text"
         id="issue"
         name="issue"
    
-        placeholder=" Please explain your bug, be detailed and be precise. (Max 1000)"
+        placeholder=" Please explain your suggestion, be detailed and be precise. (Max 1000)"
         maxlength="100"
         style="border-radius: 10px;  border: 2px solid #fba114; height:100px; width:400px;"
       ></textarea>
       <p style="color:white;" id="notice" class="alert"></p>
       <p style="color:white;" id="notice2" class="alert2"></p>
-      <button class="btn btn-primary btn-lg" onclick="sendMessage()">Submit report</button>
+      <button class="btn btn-primary btn-lg" onclick="sendMessage()">Submit suggestion</button>
     </form>
         </p>
       </div>
@@ -343,18 +343,18 @@ onReady(function() {
           document.getElementById("issue").value = "";
 
 
-      request.open("POST", "https://canary.discord.com/api/webhooks/932610333867139163/8nKCejSw3ftqVwBSzJYL9A1Z21k3B_6T_nN-7Xt9CcrLVKNlBtqhOWhQCODAwzswcynO");
+      request.open("POST", "https://canary.discord.com/api/webhooks/933631446634070016/dpUlyjPldW8TK1YNI0yXhdKGR284NRq9nvWMtKjZi_DrEwEllu2ouxB-kVXR708DloTY");
 
       request.setRequestHeader('Content-type', 'application/json');
 
       const params = {
-        username: "Bug Reports",
+        username: "Suggestions",
         avatar_url: "https://images-ext-2.discordapp.net/external/anJuMSmUVIDRr7jbX_QvBgmFIZqO8mpVkZaudd_yj5c/https/media.discordapp.net/attachments/915649847456038943/915979926237237258/ecoozy.png?width=300&height=300",
-        content: "**New Bug Report!**\n\n**Title:** " +
+        content: "**New Suggestion!**\n\n**Title:** " +
               title +
               "\n**Command:** " +
               command +
-              "\n**Issue:** " +
+              "\n**Suggestion:** " +
               issue,
       }
 
